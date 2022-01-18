@@ -1,0 +1,63 @@
+.app__page-teams {
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+    }
+    .filter-members-wrapper {
+        @include respond-below(small) {
+        }
+        .nav {
+            background-image: url("./../../assets/images/teams-page/title/teams-title-bg.svg");
+            background-size: 100%;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            @include respond-below(small) {
+                background-image: none;
+                flex-direction: column;
+            }
+
+            li {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                @include respond-below(small) {
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                }
+                a {
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    @include respond-below(small) {
+                        padding-top: 0.5rem;
+                        padding-bottom: 0.5rem;
+                    }
+                    @include respond-below(medium) {
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                    }
+                    padding-top: 1.2rem;
+                    padding-bottom: 1.2rem;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    color: #910d11;
+                    &:hover {
+                        color: var(--theme-color-white);
+                        background-image: url("./../../assets/images/teams-page/nav/nav-active.svg");
+                    }
+                }
+                &.active {
+                    a {
+                        color: var(--theme-color-white);
+                        background-image: url("./../../assets/images/teams-page/nav/nav-active.svg");
+                    }
+                }
+            }
+        }
+    }
+}

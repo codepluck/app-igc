@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="India Garden Catering"
+    />
+    <title>Indian Garden</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/dist/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="dist/css/app.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app__root">
+      <header class="app__header">
+        <div class="app__header-inner py-2">
+          <div class="container mx-auto">
+            <div class="row flex justify-between items-center md:px-4 invisible md:visible">
+              <div class="app__header-item flex items-center space-x-4">
+                <div class="app__header-logo">
+                  <a href="index.html">
+                  <img
+                    style="height: 65px; width: 275px"
+                    src="assets/images/header/app-logo.svg"
+                  />
+                </a>
+                </div>
+              </div>
+              <div class="app__header-item">
+                <div class="app__header-logo">
+                  <img
+                    style="height: 80px; width: 80px"
+                    src="assets/images/header/header-el.svg"
+                  />
+                </div>
+              </div>
+              <div class="app__header-item lg:visible md:invisible">
+                <nav class="app__header-nav-items relative">
+                  <ul class="nav flex items-center">
+                    <li class="dropdown group inline-block relative">
+                      <a class="text-white text-lg" href="#/">Events</a>
+                      <ul
+                        class="dropdown-menu absolute hidden text-gray-700 pt-1 group-hover:block z-50"
+                      >
+                        <li class="">
+                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                            >Weddings</a
+                          >
+                        </li>
+                        <li class="">
+                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                            >Social
+                          </a>
+                        </li>
+                        <li class="">
+                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                            >Corporate</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="text-white text-lg" href="/menus.html">Menus</a></li>
+                    <li><a class="text-white text-lg" href="/venues.html">Venues</a></li>
+                    <li><a class="text-white text-lg" href="/teams.html">Teams</a></li>
+                    <li><a class="text-white text-lg" href="/contact.html">Contact</a></li>
+                    <li class="search-items">
+                      <button class="search-icon cursor-pointer pl-6 pt-2" id="search-toggle">
+                        <i class="text-white" data-feather="search"></i>
+                      </button>
+                      <div class="absolute top-1 left-0 w-full" id="search-field" >
+                          <input type="search" placeholder="Search_" autofocus="autofocus" class="px-2 rounded-lg w-full text-grey-800 transition focus:outline-none focus:border-transparent p-2 appearance-none leading-normal text-xl lg:text-2xl">
+                          <button type="submit" class=" absolute top-3 right-1">
+                            <i  class="text-blue" data-feather="search"></i>
+                          </button>
+                        </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="section app__banner">
+        <div
+          class="app__banner-carousel bg-[#800000]"
+          style="
+            background-image: url('dist/images/banner.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+          "
+        >
+          <div class="container mx-auto">
+             <div class="banner-slide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                  <div class="block min-h-screen">
+                      <div class="flex w-7/12 flex-col mx-auto mt-20">
+                        <div class="flex items-center">
+                          <input
+                            type="email"
+                            id="search-event"
+                            onkeyup="javascript:searchQuery(this.value)"
+                            class="flex-grow placeholder-[#800000] border rounded py-1 px-1 lg:py-4 lg:px-3 uppercase text-2xl font-semibold text-[#800000]"
+                            placeholder="I'm planning a"
+                          />
+                        </div>
+                      </div>
+                      <div class="flex w-7/12 flex-col mx-auto">
+                        <div class="results-wrapper w-full">
+                          <ul class="p-2 rounded-md mt-2 bg-white" style="display: none;" id="result-list"></ul>
+                        </div>
+                      </div>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section app__features">
+        <div class="app__features-inner py-10">
+          <div class="container mx-auto">
+            <div class="bg-white w-full my-12 px-4 md:px-0">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+                <div class="flex md:flex-row p-2 feature items-center">
+                  <div class="w-1/2 md:w-7/12 overflow-hidden">
+                    <img
+                      class="object w-full h-72"
+                      src="dist/images/features/indian-wedding.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="w-1/2 md:w-5/12 mt-4 md:mt-0 md:ml-4">
+                    <h2
+                      class="text-xl uppercase font-bold leading-tight text-gray-800"
+                    >
+                      Weddings
+                    </h2>
+                    <p
+                      class="leading-normal text-base pt-2 text-color font-light"
+                    >
+                      We always search for imaginative ways to make our events
+                      stand out and no two will ever be the same. will ever be
+                      the same.
+                    </p>
+                    <a
+                      class="px-6 inline-block mt-4 py-2 border-none btn text-lg leading-normal rounded-md uppercase"
+                      href=""
+                    >
+                      View Menu
+                    </a>
+                  </div>
+                </div>
+                <div class="flex md:flex-row p-2 feature items-center">
+                  <div class="w-1/2 md:w-7/12 overflow-hidden">
+                    <img
+                      class="object w-full h-72"
+                      src="dist/images/features/bride-with-groom.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="w-1/2 md:w-5/12 mt-4 md:mt-0 md:ml-4">
+                    <h2
+                      class="text-xl uppercase font-bold leading-tight text-gray-800"
+                    >
+                      Social
+                    </h2>
+                    <p
+                      class="leading-normal text-base pt-2 text-color font-light"
+                    >
+                      We make it our business to know what is happening across
+                      our venues and love to find ways to integrate these
+                      details..
+                    </p>
+                    <a
+                      class="px-6 inline-block mt-4 py-2 border-none btn text-lg leading-normal rounded-md uppercase"
+                      href=""
+                    >
+                      View Menu
+                    </a>
+                  </div>
+                </div>
+                <div class="flex md:flex-row p-2 feature items-center">
+                  <div class="w-1/2 md:w-7/12 rounded overflow-hidden">
+                    <img
+                      class="object w-full h-72"
+                      src="dist/images/features/close-up-people.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="w-1/2 md:w-5/12 mt-4 md:mt-0 md:ml-4">
+                    <h2
+                      class="text-xl uppercase font-bold leading-tight text-gray-800"
+                    >
+                      Weddings
+                    </h2>
+                    <p
+                      class="leading-normal text-base pt-2 text-color font-light"
+                    >
+                      Our team will advise on everything from sourcing the
+                      perfect venue, exploring branding opportunities
+                      opportunities.
+                    </p>
+                    <a
+                      class="px-6 inline-block mt-4 py-2 border-none btn text-lg leading-normal rounded-md uppercase"
+                      href=""
+                    >
+                      View Menu
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section app__content">
+        <div
+          class="app__content-inner"
+          style="
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('dist/images/content/content-bg.png');
+          "
+        >
+          <div class="container mx-auto relative py-28 px-10">
+            <div class="splide-content">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="splide__slide__container">
+                      <div class="flex justify-end">
+                        <div
+                        class="block p-10 w-7/12"
+                        style="background-color: rgba(72 ,3, 3,.8)"
+                      >
+                        <h2
+                          class="text-white text-sm md:text-4xl leading-normal uppercase font-bold"
+                        >
+                          We pride ourselves on quality fresh food with a
+                          presentation that exemplifies simple elegance.
+                        </h2>
+                        <p class="text-white my-4 text-base font-normal">
+                          We are a full-service catering enterprise
+                          specializing in meeting your every need for any
+                          event. We can accommodate all the details of your
+                          event through our network of floral designers,
+                          vendors and event planners.
+                        </p>
+                        <a
+                          class="px-6 rounded uppercase inline-block my-4 py-2 border-none btn text-lg leading-normal"
+                          href=""
+                        >
+                          Read More
+                        </a>
+                      </div>
+
+
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="splide__slide__container">
+                      <div class="flex justify-end">
+                        <div
+                        class="block p-10 w-7/12"
+                        style="background-color: rgba(72 ,3, 3,.8)"
+                      >
+                        <h2
+                          class="text-white text-sm md:text-4xl leading-normal uppercase font-bold"
+                        >
+                          We pride ourselves on quality fresh food with a
+                          presentation that exemplifies simple elegance.
+                        </h2>
+                        <p class="text-white my-4 text-base font-normal">
+                          We are a full-service catering enterprise
+                          specializing in meeting your every need for any
+                          event. We can accommodate all the details of your
+                          event through our network of floral designers,
+                          vendors and event planners.
+                        </p>
+                        <a
+                          class="px-6 uppercase inline-block my-4 py-2 border-none btn text-lg leading-normal"
+                          href=""
+                        >
+                          Read More
+                        </a>
+                      </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="app__features"
+        style="
+          background-image: url(dist/images/content/bg-section.svg);
+          background-size: auto;
+          background-repeat: no-repeat;
+          background-position: center;
+        "
+      >
+        <div class="app__features-inner w-full relative py-10">
+          <div class="container mx-auto">
+            <div class="w-10/12 mx-auto my-28 relative">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+                <div class="flex flex-col md:flex-row">
+                  <div class="w-full rounded overflow-hidden">
+                    <img
+                      class="object h-auto"
+                      src="dist/images/icons/icon-1.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col md:flex-row">
+                  <div class="w-full rounded overflow-hidden">
+                    <img
+                      class="object h-auto"
+                      src="dist/images/icons/icon-2.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col md:flex-row">
+                  <div class="w-full rounded overflow-hidden">
+                    <img
+                      class="object h-auto"
+                      src="dist/images/icons/icon-3.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section app__carousel">
+        <div class="app__carousel-inner">
+          <div class="container mx-auto">
+            <div class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img
+                      class="object w-full"
+                      src="dist/images/slides/slide-1.png"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      class="object w-full"
+                      src="dist/images/slides/slide-2.png"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="dist/images/slides/slide-3.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="dist/images/slides/slide-4.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="dist/images/slides/slide-5.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="dist/images/slides/slide-6.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="dist/images/slides/slide-7.png" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section app__cta">
+        <div class="app__carousel-inner">
+          <div class="container mx-auto">
+            <div class="w-12/12 md:w-6/12 mx-auto my-16 relative">
+              <div class="w-full px-6 md:px-0 bg-white">
+                <h2
+                  class="text-2xl md:text-5xl mb-8 font-bold uppercase text-[#4F0505] leading-normal"
+                >
+                  <span class="block text-4xl md:text-7xl">Any occasion</span> full-service
+                  and drop-off
+                </h2>
+                <p class="text-base md:text-xl leading-normal text-color-2">
+                  Full-Service is the perfect dining experience where you and
+                  your guests can enjoy engaging conversations while our
+                  professional wait staff takes care of every need. If you are
+                  looking for something much more casual, our drop-off catering
+                  service is a great way to avoid making a big mess in the
+                  kitchen. We'll deliver the meal hot from our kitchen right to
+                  your door.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="app__footer">
+        <div
+          class="app__footer-inner"
+          style="
+            background-image: url(dist/images/footer/footer-bg.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+          "
+        >
+          <div
+            class="max-w-screen-xl mx-auto py-6 px-4 sm:px-6 lg:py-6 lg:px-8"
+          >
+            <div class="flex flex-col md:flex-row content-between space-x-5">
+              <div class="item w-full md:w-2/5">
+                <div class="w-full pr-24">
+                  <div class="flex items-center">
+                    <div class="inline-block mr-4">
+                      <img
+                        src="dist/images/header-el-small.svg"
+                        class="h-10"
+                      />
+                    </div>
+                    <div class="inline-block">
+                      <img class="h-10" src="dist/images/app-logo.svg" />
+                    </div>
+                  </div>
+                  <div class="block">
+                    <p class="text-white mt-4 text-base">
+                      Our catering services are perfect for any size, any style,
+                      and are customized to your budget.
+                    </p>
+                  </div>
+                  <div class="block">
+                    <h3 class="text-xl uppercase text-white mt-6 mb-4">
+                      Connect with us
+                    </h3>
+                    <div class="flex items-center">
+                      <input
+                        class="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
+                        placeholder="Enter your email address"
+                      />
+                      <button
+                        class="px-8 rounded-r-lg bg-[#D44146] text-white font-bold p-4 uppercase border-[#D44146] border-t border-b border-r"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item w-full md:w-1/5 mt-8">
+                <div class="block w-full">
+                  <h2 class="font-bold text-xl text-white mb-4">Company</h2>
+                  <nav class="w-full">
+                    <ul>
+                      <li class="my-2">
+                        <a class="my-2 text-white text-base" href="#/">Team </a>
+                      </li>
+                      <li class="my-2">
+                        <a class="my-2 text-white text-base" href="#/"
+                          >Portfolio
+                        </a>
+                      </li>
+                      <li class="my-2">
+                        <a class="my-2 text-white text-base" href="#/"
+                          >Carreer
+                        </a>
+                      </li>
+                      <li class="my-2">
+                        <a class="my-2 text-white text-base" href="#/">FAQ </a>
+                      </li>
+                      <li class="my-2">
+                        <a class="text-white text-base" href="#/"
+                          >Recognisation
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="item w-full md:w-1/5 mt-8">
+                <div class="block w-full">
+                  <h2 class="font-bold text-xl text-white mb-4">Support</h2>
+                  <nav class="w-full">
+                    <ul>
+                    <li class="my-2">
+                    <a class="block my-2 text-white text-base" href="#/"
+                      >Contact Us
+                    </a>
+                  </li>
+                    <li class="my-2">
+                    <a class="block my-2 text-white text-base" href="#/"
+                      >Privacy policy
+                    </a>
+                  </li>
+                    <a class="block my-2 text-white text-base" href="#/"
+                      >Term of use
+                    </a>
+                  </li>
+                    <li class="my-2">
+                    <a class="block my-2 text-white text-base" href="#/"
+                      >Photo credits
+                    </a>
+                  </li>
+                    <li class="my-2">
+                    <a class="block my-2 text-white text-base" href="#/"
+                      >Reviews
+                    </a>
+                  </li>
+                  </ul>
+
+                  </nav>
+                </div>
+              </div>
+              <div class="item w-full md:w-1/5 mt-8">
+                <div class="block w-full">
+                  <h2 class="font-bold text-xl text-white mb-4">Company</h2>
+                  <div class="w-full">
+                    <p class="my-2 text-white text-base">Chicago Downtown,</p>
+                    <p class="my-2 text-white text-base">
+                      247 E Ontario street,
+                    </p>
+                    <p class="my-2 text-white text-base">
+                      2nd Floor, Chicago IL 60611
+                    </p>
+                    <p class="my-2 text-white text-base">312-280-4910</p>
+                    <p class="my-2 text-white text-base">
+                      <a href="#/">www.indiangardenchicago.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-10 mb-8 pt-4 pb-4 border-t border-[#af5e5e] flex flex-col md:flex-row md:justify-between copyright-bar items-center text-sm text-gray-400"
+            >
+              <div class="order-3 md:order-1 py-2">
+                <nav class="nav">
+                  <a href="#/" class="item px-4">Items</a>
+                  <a href="#/" class="item px-4">Policy</a>
+                  <a href="#/" class="item px-4">Security</a>
+                </nav>
+              </div>
+              <div class="order-1 md:order-2 py-2">
+                <img src="dist/images/social/social-icons.png" />
+              </div>
+              <div class="order-2 md:order-3 py-2">
+                <p class="text-[#F9F1F1]">
+                  &copy; 2022 Indiangarden All rights reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+    <script src="dist/slider.js"></script>
+    <script src="dist/search.js"></script>
+
+  </body>
+</html>

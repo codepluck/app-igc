@@ -1,0 +1,10 @@
+{
+  "name": "India Garden Catering",
+  "short_name": "IGT",
+  "theme_color": "#4f0505",
+  "background_color": "#4f0505",
+  "display": "browser",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/"
+}

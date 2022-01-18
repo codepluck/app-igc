@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <meta
+         name="description"
+         content="India Garden Catering"
+         />
+      <title>Indian Garden Catering | Venues </title>
+      <link rel="manifest" href="/manifest.json">
+      <link rel="shortcut icon" href="/assets/images/favicon.ico">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <script src="assets/js/app.js" type="text/javascript"></script>
+      <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+      <link
+         href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap"
+         rel="stylesheet"
+         />
+   </head>
+   <body>
+      <div id="app__root">
+         <!-- App Header -->
+         <header class="app__header">
+            <div class="app__header-inner py-2">
+               <div class="container mx-auto">
+                  <div class="row md:flex justify-between items-center md:px-4 invisible hidden md:visible">
+                     <div class="app__header-item flex items-center space-x-4">
+                        <div class="app__header-logo">
+                           <a href="index.html">
+                           <img
+                              src="assets/images/header/app-logo.svg"
+                              alt="app logo"
+                              />
+                           </a>
+                        </div>
+                     </div>
+                     <div class="app__header-item">
+                        <div class="app__header-logo-center invisible lg:visible">
+                           <img
+                              src="assets/images/header/header-el.svg"
+                              alt="app logo"
+                              />
+                        </div>
+                     </div>
+                     <div class="app__header-item md:visible">
+                        <nav class="app__header-nav-items relative">
+                           <ul class="nav flex items-center">
+                              <li class="dropdown group inline-block relative">
+                                 <a class="text-white text-sm lg:text-lg" href="#/">Events</a>
+                                 <ul
+                                    class="dropdown-menu absolute hidden text-gray-700 pt-1 group-hover:block z-50"
+                                    >
+                                    <li class="">
+                                       <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                          >Weddings</a
+                                          >
+                                    </li>
+                                    <li class="">
+                                       <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                          >Social
+                                       </a>
+                                    </li>
+                                    <li class="">
+                                       <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                          >Corporate</a
+                                          >
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/menus.html">Menus</a></li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/venues.html">Venues</a></li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/teams.html">Teams</a></li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/contact.html">Contact</a></li>
+                              <li class="search-items">
+                                 <button class="search-icon cursor-pointer pl-6 pt-1 lg:pt-2" id="search-toggle">
+                                 <i class="text-white h-10 lg:h-20" data-feather="search"></i>
+                                 </button>
+                                 <div class="absolute top-1 md:top-2 lg:top-7 left-0 w-full" id="search-field" >
+                                    <input type="search" placeholder="Search_" autofocus="autofocus" class="px-2 rounded-lg w-full text-grey-800 transition focus:outline-none focus:border-transparent p-2 appearance-none leading-normal text-sm lg:text-2xl">
+                                    <button type="submit" class=" absolute top-2 lg:top-3 right-1 lg:right-2">
+                                    <i  class="text-sm" data-feather="search"></i>
+                                    </button>
+                                 </div>
+                              </li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+                  <div class="row flex md:hidden justify-between items-center md:px-4 visible md:invisible">
+                     <div class="app__header-item mx-auto w-60">
+                        <div class="app__header-logo">
+                           <a class="block" href="index.html">
+                           <img
+                              class="block mx-auto"
+                              style="height: 48px; width: 48px"
+                              src="assets/images/header/header-el.svg"
+                              />
+                           <img
+                              class="block mx-auto  mt-2"
+                              style="height: 35px; width: 145px"
+                              src="assets/images/header/app-logo.svg"
+                              />
+                           </a>
+                        </div>
+                        <nav class="app__header-nav-items relative group">
+                           <div class="block mt-3">
+                              <img  id="dropdown-mobile"
+                                 class="block mx-auto mt-4"
+                                 style="height: 12px; width: 12px"
+                                 src="assets/images/header/arrow-down.png"
+                                 />
+                              <ul id="menu-items" class="nav flex-col items-center text-center pb-8 mt-4 hidden group-hover:block">
+                                 <li class="dropdown dropdown-mobile group inline-block relative w-full">
+                                    <a id="menu-events" class="text-white text-lg" href="#/">Events</a>
+                                    <ul
+                                       id="events-dropdown"
+                                       class="dropdown-menu mobile-menu absolute hidden text-gray-700 pt-1 group-hover:block z-50"
+                                       >
+                                       <li class="">
+                                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                             >Weddings</a
+                                             >
+                                       </li>
+                                       <li class="">
+                                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                             >Social
+                                          </a>
+                                       </li>
+                                       <li class="">
+                                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                             >Corporate</a
+                                             >
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li><a class="text-white text-lg" href="/menus.html">Menus</a></li>
+                                 <li><a class="text-white text-lg" href="/venues.html">Venues</a></li>
+                                 <li><a class="text-white text-lg" href="/teams.html">Teams</a></li>
+                                 <li><a class="text-white text-lg" href="/contact.html">Contact</a></li>
+                              </ul>
+                           </div>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- ## App Header -->
+         <!-- App Page Venues -->
+         <section class="w-full app__page-venues">
+            <!-- Section Banner -->
+              <section class="app__page-banner w-full">
+               <div class="w-full bg-center bg-cover h-[10rem] md:h-[16rem] lg:h-[32rem]" 
+               style="
+               background-image: url(dist/images/venues/banner/banner-bg.png);">
+                 <div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
+                 </div>
+               </div>
+              </section>
+            <!-- Section Banner --> 
+            <!-- Section Venues  -->
+            <section class="app__venues body-font">
+               <div class="container px-5 py-10 mx-auto">
+                  <!-- ============= Heading Row =======-->
+                  <div class="flex flex-wrap w-full mb-2">
+                     <div class="w-full mb-6 lg:mb-0">
+                        <h1 class="text-3xl lg:text-5xl text-color-3 title-font mb-1 uppercase font-bold">
+                           Venues
+                        </h1>
+                        <p class="block w-full mt-4 mb-3 text-color-4 text-xl">
+                           Perfect venue for all celebrations. Transform the event into a memorable experience for your guests.
+                        </p>
+                        <p class="block w-full mt-2 mb-4 text-lg text-color-2">
+                           With a multitude of spaces and layout options, The IG Catering is an ideal setting for cocktail parties, weddings, luncheons, meetings and galas all year long. Work with our event planning and culinary teams to bring your vision to life.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="flex flex-wrap w-full mb-2">
+                     <nav class="w-full flex justify-start self-center items-center lg:px-0 md:px0 px-2">
+                        <ul class="flex w-full nav items-center">
+                           <li class="group inline-block relative dropdown py-1">
+                              <a href="#/" class="uppercase text-color-3 lg:text-lg text-base md:text-sm font-medium">
+                                <span class="mr-1">Guest Count</span>
+                               </a>
+                                 <ul class="absolute  filter-count top-12 bg-white px-2 lg:px-6 w-full z-50 hidden text-color-3 pt-1 group-hover:block">
+                                    <li class="py-1 child">
+                                       <label class="uppercase text-color-3">Guest Count</label>
+                                    </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="guestOptions" value="seated" id="seated">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="seated">
+                                             Seated
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="guestOptions" value="standing" id="standing">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="standing">
+                                                Standing
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="guestOptions" value="floating" id="floating">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="floating">
+                                                Floating
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="guestOptions"  value="50" id="50">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="50">
+                                                50
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="guestOptions" value="100" id="100">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="100">
+                                                100
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="guestOptions" value="200" id="200">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="200">
+                                                200
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="guestOptions"  value="500" id="500">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="500">
+                                                500
+                                             </label>
+                                          </div>
+                                       </li>
+                                 </ul>
+                           </li>
+                          
+                           <li class="group inline-block relative dropdown py-1">
+                              <a href="#/" class="uppercase text-color-3 lg:text-lg text-base md:text-sm font-medium">
+                                <span class="mr-1">Style/Decor</span>
+                               </a>
+                                 <ul class="absolute  filter-style top-12 bg-white px-2 lg:px-6 w-full z-50 hidden text-color-3 pt-1 group-hover:block">
+                                    <li class="py-1 child">
+                                       <label class="uppercase text-color-3">Style/Decor</label>
+                                    </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="tradition" id="tradition">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="tradition">
+                                             Tradition
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="moderen" id="moderen">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="moderen">
+                                                Moderen
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="rustic" id="rustic">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="rustic">
+                                                Rustic
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="garden" id="garden">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="garden">
+                                                Garden
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="electric" id="electric">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="electric">
+                                                Electric
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="industrial" id="industrial">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="industrial">
+                                                Industrial
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="night-club" id="night-club">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="night-club">
+                                                Night Club
+                                             </label>
+                                          </div>
+                                       </li>
+                                 </ul>
+                           </li>
+                           <li class="group inline-block relative dropdown py-1">
+                              <a href="#/" class="uppercase text-color-3 lg:text-lg text-base md:text-sm font-medium">
+                                <span class="mr-1">Location</span>
+                               </a>
+                                 <ul class="absolute  filter-location top-12 bg-white location px-2 lg:px-6 w-full z-50 hidden text-color-3 pt-1 group-hover:block">
+                                    <li class="py-1 child">
+                                       <label class="uppercase text-color-3">Location</label>
+                                    </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="chicagoDowntown" id="chicagoDowntown">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="chicagoDowntown">
+                                               Chicago-Downtown
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="chicagoNorth" id="chicagoNorth">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="chicagoNorth">
+                                                Chicago North
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="chicagoSouth" id="chicagoSouth">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="chicagoSouth">
+                                                Chicago-South
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="chicagoWest" id="chicagoWest">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="chicagoWest">
+                                                Chicago-West
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="suburbsNorth" id="suburbsNorth">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="suburbsNorth">
+                                                Suburbs-North
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="suburbsWest" id="suburbsWest">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="suburbsWest">
+                                                Suburbs-West
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="suburbsSouth" id="suburbsSouth">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="suburbsSouth">
+                                                Suburbs-South
+                                             </label>
+                                          </div>
+                                       </li>
+                                 </ul>
+                           </li>
+                           <li class="group inline-block relative dropdown py-1">
+                              <a href="#/" class="uppercase text-color-3 lg:text-lg text-base md:text-sm font-medium">
+                                <span class="mr-1">Event Type</span>
+                               </a>
+                                 <ul class="absolute  filter-events top-12 bg-white px-2 lg:px-6 w-full z-50 hidden text-color-3 pt-1 group-hover:block">
+                                    <li class="py-1 child">
+                                       <label class="uppercase text-color-3">Event Type</label>
+                                    </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="wedding" id="wedding">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="wedding">
+                                               Wedding
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="social" id="social">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="social">
+                                                Social
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="corporate" id="corporate">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="corporate">
+                                                Corporate
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="picnic" id="picnic">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="picnic">
+                                               Picnic
+                                             </label>
+                                          </div>
+                                       </li>
+                                 </ul>
+                           </li>
+                           <li class="group inline-block relative dropdown py-1">
+                              <a href="#/" class="uppercase text-color-3 lg:text-lg text-base md:text-sm font-medium">
+                                <span class="mr-1">Indoor/Outdoor</span>
+                               </a>
+                                 <ul class="absolute  filter-pref top-12 bg-white px-2 lg:px-6 w-full z-50 hidden text-color-3 pt-1 group-hover:block">
+                                    <li class="py-1 child">
+                                       <label class="uppercase text-color-3">Indoor/Outdoor</label>
+                                    </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="indoor" id="indoor">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="indoor">
+                                                Indoor
+                                             </label>
+                                          </div>
+                                       </li>
+                                       <li class="py-1 child">
+                                          <div class="form-check">
+                                             <input class="form-check-input inline-block appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:leading-normal focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="outdoor" id="outdoor">
+                                             <label class="form-check-label cursor-pointer inline-block text-color-3" for="outdoor">
+                                                Outdoor
+                                             </label>
+                                          </div>
+                                       </li>
+                                 </ul>
+                           </li>
+                           <li class="ml-auto active clear-filter" id="clear-filter"><a class="uppercase text-color-3 lg:text-lg text-base font-medium" href="#/">Clear Filters</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <!-- ============= Heading Row =======-->
+                  <!-- ============= Row =======-->
+                  <div class="grid grid-cols-4 gap-4 shape-shuffle-container js-shuffle lg:mt-6">
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="wedding" data-location="chicagoDowntown" data-style="tradition" data-pref="" data-guest="seated">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-1.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="venue.html" class="text-lg text-white font-medium tracking-wide">
+                              Green Medows
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="social" data-location="chicagoNorth" data-style="" data-pref="industrial" data-guest="floating">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-2.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              Galleria Marchetti
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="indoor"  data-event="corporate" data-location="chicagoDowntown" data-style="tradition" data-pref="" data-guest="seated">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-3.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              Loft Lucia
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="picnic" data-location="chicagoWest" data-style="tradition" data-pref="" data-guest="seated">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-4.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              Eden Gardens
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                  <!-- =============/ Row end =======-->
+                  <!-- ============= Row =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="picnic" data-location="chicagoWest" data-style="industrial" data-pref="" data-guest="100">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-5.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              Loft on Lake
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="corporate" data-location="chicagoNorth" data-style="industrial" data-pref="" data-guest="200">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-6.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              City View Loft
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="indoor"  data-event="social" data-location="suburbsWest" data-style="tradition" data-pref="" data-guest="500">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-7.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              The Crystal Gardens
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="wedding" data-location="chicagoSouth" data-style="moderen" data-pref="" data-guest="seated">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-8.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              The Crystal Gardens
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                  <!-- =============/ Row end =======-->
+                  <!-- ============= Row =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="social" data-location="chicagoWest" data-style="moderen" data-pref="" data-guest="standing">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-9.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              Skyline Loft
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="corporate" data-location="chicagoSouth" data-style="industrial" data-pref="" data-guest="50">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-10.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              The Geraghty
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="picnic" data-location="suburbsWest" data-style="moderen" data-pref="" data-guest="500">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-11.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              Moonlight Studios
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="wedding" data-location="suburbsNorth" data-style="rustic" data-pref="" data-guest="100">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-12.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              Moonlight Studios
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                  <!-- =============/ Row end =======-->
+                  <!-- ============= Row =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="corporate" data-location="chicagoSouth" data-style="industrial" data-pref="" data-guest="seated">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-13.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              Chez Wedding Venue
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="picnic" data-location="suburbsNorth" data-style="rustic" data-pref="" data-guest="50">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-14.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              Colvin House
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="social" data-location="chicagoSouth" data-style="rustic" data-pref="" data-guest="500">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-15.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              Venue West
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                     <!-- ============= Venue Item =======-->
+                     <div class="item item-vanue filter lg:w-1/4 md:w-2/4 w-full" data-pref="outdoor"  data-event="corporate" data-location="suburbsWest" data-style="rustic" data-pref="" data-guest="100">
+                        <div class="relative venue-item overflow-hidden transition p-2  duration-500 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                           <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                              src="dist/images/venues/items/item-16.png" alt="Vanue Item" />
+                           <div class="absolute inset-x-0 bottom-0 m-2 px-6 py-4 bg-1">
+                              <a href="#/" class="text-lg text-white font-medium tracking-wide">
+                              Venue West
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- ============= // Venue Item =======-->
+                  </div>
+                  <!-- =============/ Row end =======-->
+               </div>
+            </section>
+            <!-- ============= Row Venues =======-->
+
+            <!-- Row CTA -->
+            <section class="section app__cta">
+               <div class="app__carousel-inner">
+                  <div class="container mx-auto">
+                     <div class="w-12/12 md:w-9/12 lg:w-7/12 mx-auto mb-6 mt-6 md:mt-6 md:mb-12 lg:my-16 relative">
+                        <div class="w-full px-6 md:px-0 bg-white">
+                           <h2
+                              class="text-2xl lg:text-5xl mb-4 font-bold uppercase text-[#4F0505] leading-normal"
+                              >
+                              <span class="block text-4xl md:text-5xl lg:text-7xl">FIND THE PERFECT PLACE</span>
+                              FOR ANY OCCASION
+                           </h2>
+                           <p class="text-base lg:text-xl leading-normal text-color-2">
+                              We make it our business to know what is happening across our 
+                              venues and love to find ways to integrate these details into
+                           events. From bespoke bar design to creative canapé trays, 
+                           dramatic food stall set ups and staff uniforms, our venues
+                           provide us with an unending source of inspiration and 
+                           material to make events stand out.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- //Row CTA -->
+
+
+            <!--  Row Venues Map -->
+            <section class="app__venues-map section app__content">
+                     <div class="app__content-inner"
+                     style="
+                     background-repeat: no-repeat;
+                     background-size: cover;
+                     background-image: url('dist/images/venues/venue-bg.png');
+                     "
+                     >
+                        <div class="ml-auto md:my-0 lg:my-24 container relative py-6 md:py-10 lg:py-28 px-0 md:px-0">
+                              <!-- ##Slide -->
+                              <div class="flex justify-end">
+                                       <div
+                                          class="block lg:w-5/12 md:w-6/12 p-4 w-8/12 pr-6 md:py-10 md:pl-5 lg:pl-10 md:pr-6 lg:pr-6 content-bg"
+                                          style="background-color: rgba(29, 55, 81,.8)"
+                                          >
+                                          <h2
+                                             class="text-white text-sm md:text-xl lg:text-4xl leading-normal uppercase font-bold"
+                                             >
+                                             Do you already have a venue in mind?
+                                          </h2>
+                                          <p class="text-white my-4 text-sm md:text-base font-light md:font-normal">
+                                             Then we're halfway there! We can now help
+                                             you see how to get the best out of your
+                                             chosen venue.
+                                          </p>
+                                          <a
+                                          class="px-4 md:px-6 inline-block mt-2 md:mt-4 py-1 md:py-2 border-none btn text-sm md:text-sm lg:text-lg leading-normal rounded-md uppercase"
+                                          href="#/"
+                                          >
+                                          Contact Us
+                                       </a>
+                                       </div>
+                              </div>
+                              <!-- ##Slide -->
+                        </div>
+                     </div>
+            </section>
+            <!-- ##  Row Venues Map -->
+         </section>
+         <!-- App Footer -->
+         <footer class="app__footer">
+            <div class="app__footer-inner">
+               <div
+                  class="max-w-screen-xl mx-auto py-6 lg:py-6"
+                  >
+                  <div class="flex flex-col md:flex-row content-between">
+                     <div class="w-full md:w-5/12 lg:w-6/12 flex">
+                           <div class="item w-full px-4 md:pl-6 md:pr-12 lg:pl-8 lg:pr-24">
+                              <div class="flex items-center">
+                                 <div class="inline-block mr-4">
+                                    <img
+                                       src="assets/images/header/header-el-small.svg"
+                                       class="h-10"
+                                       alt="header image el"
+                                       />
+                                 </div>
+                                 <div class="inline-block">
+                                    <img
+                                    alt="header image el"
+                                    class="h-10" 
+                                    src="assets/images/header/app-logo.svg"  />
+                                 </div>
+                              </div>
+                              <div class="block">
+                                 <p class="text-white mt-10 md:mt-4 text-base  md:text-sm font-normal md:font-normal lg:text-base">
+                                    Our catering services are perfect for any size, any style,
+                                    and are customized to your budget.
+                                 </p>
+                              </div>
+                              <div class="block">
+                                 <h3 class="font-normal md:font-bold text-lg text-left text-white uppercase text-white mt-6 mb-4">
+                                    Connect with us
+                                 </h3>
+                                 <div class="flex items-center">
+                                    <input
+                                       class="w-full rounded-l-lg lg:p-4 md:p-3 p-3 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
+                                       placeholder="Enter your email address"
+                                       />
+                                    <button
+                                       class="lg:p-4 md:p-3 p-3 rounded-r-lg btn text-white font-bold uppercase border"
+                                       >
+                                    Send
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                     </div>
+                     <div class="w-full md:w-7/12 lg:w-6/12 flex flex-col md:flex-row">
+                      <div class="w-full md:w-8/12 px-4 md:px-2 flex">
+                        <div class="item w-1/2 mt-8">
+                          <div class="block w-full py-4 md:py-0">
+                             <h2 class="font-normal md:font-bold text-xl text-left text-white mb-4">Company</h2>
+                             <nav class="w-full">
+                                <ul>
+                                   <li class="my-2">
+                                      <a class="my-2 text-white text-base md:text-sm lg:text-base" href="#/">Team </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Portfolio
+                                      </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Carreer
+                                      </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="my-2 text-white text-base" href="#/">FAQ </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Recognisation
+                                      </a>
+                                   </li>
+                                </ul>
+                             </nav>
+                          </div>
+                       </div>
+                       <div class="item w-1/2 mt-8">
+                          <div class="block w-full py-4 md:py-0">
+                             <h2 class="font-normal md:font-bold text-xl text-right md:text-left text-white mb-4">Support</h2>
+                             <nav class="w-full text-right md:text-left">
+                                <ul>
+                                   <li class="my-2">
+                                      <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Contact Us
+                                      </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Privacy policy
+                                      </a>
+                                   </li>
+                                   <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                      >Term of use
+                                   </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Photo credits
+                                      </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Reviews
+                                      </a>
+                                   </li>
+                                </ul>
+                             </nav>
+                          </div>
+                       </div>
+                      </div>
+                      <div class="w-full md:w-4/12 flex px-4 md:px-2 bg-white md:bg-transparent">
+                        <div class="item w-full mt-8">
+                          <div class="block w-full">
+                             <h2 class="font-bold text-xl text-center md:text-left md:text-white mb-4">Contact</h2>
+                             <div class="w-full md:text-left text-center">
+                                <p class="my-2 md:text-white text-base md:text-sm lg:text-base">Chicago Downtown,</p>
+                                <p class="my-2 md:text-white text-base">
+                                   247 E Ontario street,
+                                </p>
+                                <p class="my-2 md:text-white text-base md:text-sm lg:text-base">
+                                   2nd Floor, Chicago IL 60611
+                                </p>
+                                <p class="my-2 md:text-white text-base md:text-sm lg:text-base">312-280-4910</p>
+                                <p class="my-2 md:text-white text-base md:text-sm lg:text-base">
+                                   <a href="#/">www.indiangardenchicago.com</a>
+                                </p>
+                             </div>
+                          </div>
+                       </div>
+                      </div>
+                     </div>
+                  </div>
+                  <div
+                     class="mt-10 mb-0 pt-4 pb-4 mx-8 border-t  flex flex-col md:flex-row md:justify-between copyright-bar items-center text-sm text-gray-400"
+                     >
+                     <div class="order-3 md:order-1 py-2">
+                        <nav class="nav">
+                           <a href="#/" class="item px-4">Items</a>
+                           <a href="#/" class="item px-4">Policy</a>
+                           <a href="#/" class="item px-4">Security</a>
+                        </nav>
+                     </div>
+                     <div class="order-1 md:order-2 py-2">
+                        <img src="dist/images/social/social-icons.png" />
+                     </div>
+                     <div class="order-2 md:order-3 py-2">
+                        <p>
+                           &copy; 2022 Indiangarden All rights reserved.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!-- //App Footer -->
+      </div>
+      <!-- Scripts -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+      <script src="assets/js/shuffle/shuffle.js"></script>
+      <script src="assets/js/shuffle/venues-shuffle.js"></script>
+      <script>
+         // header dropdown mobile
+         const dropdownButton = document.querySelector("#dropdown-mobile");
+         const dropdownList = document.querySelector("#menu-items");
+         dropdownButton.addEventListener("click", () => toggleClass(dropdownList));
+   
+         //for events
+         const eventItems = document.querySelector("#events-dropdown");
+         document.querySelector("#menu-events").addEventListener("click", () => toggleClass(eventItems));
+   
+         function toggleClass($el) {
+            if ($el.classList.contains("hidden")) {
+               $el.classList.remove('hidden')
+            } else {
+               $el.classList.add('hidden')
+            }
+         }
+   </script>
+      <!-- ##Scripts -->
+</body>
+</html>

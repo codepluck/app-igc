@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <meta
+         name="description"
+         content="India Garden Catering"
+         />
+      <title>Indian Garden Catering | Teams </title>
+      <link rel="manifest" href="/manifest.json">
+      <link rel="shortcut icon" href="/assets/images/favicon.ico">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <script src="assets/js/app.js" type="text/javascript"></script>
+      <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+      <link
+         href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap"
+         rel="stylesheet"
+         />
+   </head>
+   <body>
+      <div id="app__root">
+
+         <!-- App Header -->
+         <header class="app__header">
+            <div class="app__header-inner py-2">
+               <div class="container mx-auto">
+                  <div class="row md:flex justify-between items-center md:px-4 invisible hidden md:visible">
+                     <div class="app__header-item flex items-center space-x-4">
+                        <div class="app__header-logo">
+                           <a href="index.html">
+                           <img
+                              src="assets/images/header/app-logo.svg"
+                              alt="app logo"
+                              />
+                           </a>
+                        </div>
+                     </div>
+                     <div class="app__header-item">
+                        <div class="app__header-logo-center invisible lg:visible">
+                           <img
+                              src="assets/images/header/header-el.svg"
+                              alt="app logo"
+                              />
+                        </div>
+                     </div>
+                     <div class="app__header-item md:visible">
+                        <nav class="app__header-nav-items relative">
+                           <ul class="nav flex items-center">
+                              <li class="dropdown group inline-block relative">
+                                 <a class="text-white text-sm lg:text-lg" href="#/">Events</a>
+                                 <ul
+                                    class="dropdown-menu absolute hidden text-gray-700 pt-1 group-hover:block z-50"
+                                    >
+                                    <li class="">
+                                       <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                          >Weddings</a
+                                          >
+                                    </li>
+                                    <li class="">
+                                       <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                          >Social
+                                       </a>
+                                    </li>
+                                    <li class="">
+                                       <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                          >Corporate</a
+                                          >
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/menus.html">Menus</a></li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/venues.html">Venues</a></li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/teams.html">Teams</a></li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/contact.html">Contact</a></li>
+                              <li class="search-items">
+                                 <button class="search-icon cursor-pointer pl-6 pt-1 lg:pt-2" id="search-toggle">
+                                 <i class="text-white h-10 lg:h-20" data-feather="search"></i>
+                                 </button>
+                                 <div class="absolute top-1 md:top-2 lg:top-7 left-0 w-full" id="search-field" >
+                                    <input type="search" placeholder="Search_" autofocus="autofocus" class="px-2 rounded-lg w-full text-grey-800 transition focus:outline-none focus:border-transparent p-2 appearance-none leading-normal text-sm lg:text-2xl">
+                                    <button type="submit" class=" absolute top-2 lg:top-3 right-1 lg:right-2">
+                                    <i  class="text-sm" data-feather="search"></i>
+                                    </button>
+                                 </div>
+                              </li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+                  <div class="row flex md:hidden justify-between items-center md:px-4 visible md:invisible">
+                     <div class="app__header-item mx-auto w-60">
+                        <div class="app__header-logo">
+                           <a class="block" href="index.html">
+                           <img
+                              class="block mx-auto"
+                              style="height: 48px; width: 48px"
+                              src="assets/images/header/header-el.svg"
+                              />
+                           <img
+                              class="block mx-auto  mt-2"
+                              style="height: 35px; width: 145px"
+                              src="assets/images/header/app-logo.svg"
+                              />
+                           </a>
+                        </div>
+                        <nav class="app__header-nav-items relative group">
+                           <div class="block mt-3">
+                              <img  id="dropdown-mobile"
+                                 class="block mx-auto mt-4"
+                                 style="height: 12px; width: 12px"
+                                 src="assets/images/header/arrow-down.png"
+                                 />
+                              <ul id="menu-items" class="nav flex-col items-center text-center pb-8 mt-4 hidden group-hover:block">
+                                 <li class="dropdown dropdown-mobile group inline-block relative w-full">
+                                    <a id="menu-events" class="text-white text-lg" href="#/">Events</a>
+                                    <ul
+                                       id="events-dropdown"
+                                       class="dropdown-menu mobile-menu absolute hidden text-gray-700 pt-1 group-hover:block z-50"
+                                       >
+                                       <li class="">
+                                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                             >Weddings</a
+                                             >
+                                       </li>
+                                       <li class="">
+                                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                             >Social
+                                          </a>
+                                       </li>
+                                       <li class="">
+                                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                             >Corporate</a
+                                             >
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li><a class="text-white text-lg" href="/menus.html">Menus</a></li>
+                                 <li><a class="text-white text-lg" href="/venues.html">Venues</a></li>
+                                 <li><a class="text-white text-lg" href="/teams.html">Teams</a></li>
+                                 <li><a class="text-white text-lg" href="/contact.html">Contact</a></li>
+                              </ul>
+                           </div>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- ## App Header -->
+         <!-- App Page Menus -->
+         <section class="w-full app__page-teams">
+            <!-- Section Banner -->
+              <section class="app__page-banner w-full">
+               <div class="w-full bg-center bg-cover h-[10rem] md:h-[16rem] lg:h-[32rem]" 
+                 style=" 
+                 background-image: url(assets/images/teams-page/banner/banner-image.png);">
+                 <div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
+                 </div>
+               </div>
+            </section>
+            <!-- Section Banner --> 
+            <!-- Section Teams  -->
+            <section class="app__teams body-font">
+                  <div class="container px-5 py-10 mx-auto">
+                     <!-- ============= Heading Row =======-->
+                     <div class="flex flex-wrap w-full mb-2">
+                        <div class="lg:w-1/2 w-full mb-0">
+                           <h1 class="text-3xl pl-4 lg:text-5xl text-color-3 title-font mb-1 uppercase font-bold">
+                              Meet the team
+                           </h1>
+                        </div>
+                     </div>
+                     <div class="flex flex-wrap w-full mb-2">
+                        <nav class="block w-full mx-0 m-4 filter-members-wrapper">
+                           <ul id="filter-nav" class="filter-members flex justify-center w-full px-4 items-center nav">
+                              <li class="all-members active" data-value="all"><a data-value=""  class="uppercase text-color-3 text-lg" href="#/">&nbsp;&nbsp;All&nbsp;&nbsp;</a></li>
+                              <li data-value="1"><a data-value="1"  class="uppercase text-color-3 text-lg" href="#/">Leadership</a></li>
+                              <li data-value="2"><a data-value="2" class="uppercase text-color-3 text-lg" href="#/">Culinary</a></li>
+                              <li data-value="3"><a data-value="3" class="uppercase text-color-3 text-lg" href="#/">Operations</a></li>
+                              <li data-value="4"><a data-value="4" class="uppercase text-color-3 text-lg" href="#/">&nbsp;&nbsp;Sales&nbsp;&nbsp;</a></li>
+                              <li data-value="5"><a data-value="5" class="uppercase text-color-3 text-lg" href="#/">Event</a></li>
+                           </ul>
+                        </nav>
+                     <!-- ============= Heading Row =======-->
+                     <!-- ============= Row =======-->
+                        <div class="js-shuffle w-full"  id="filtr-container">
+                           <!-- =============/ Row =======-->
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="5">
+                               <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-1.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+
+                                 </div>
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="4">
+                               <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-2.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+                              </div>
+
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="3">
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-3.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+                              </div>
+
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="2">
+                                    <div class="wrapper border p-2">
+                                 
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-4.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+
+                                 </div>
+                           <!-- ============= Row =======-->
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="1">
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-1.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+
+                                 </div>
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-feather="2">
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-2.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+                              </div>
+
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="3">
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-3.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+                                 </div>
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="4" >
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-4.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+
+                                 </div>
+                           <!-- =============/ Row end =======-->
+                           <!-- ============= Row =======-->
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12"  data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="5" >
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-1.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+                                 </div>
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="4">
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-2.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+                                 </div>
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-feather="3">
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-3.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+                                 </div>
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12"  data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="2" >
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-4.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+                                 </div>
+                           <!-- =============/ Row end =======-->
+                           <!-- ============= Row =======-->
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="1">
+                                    <div class="wrapper border p-2">
+                                  
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-1.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+                                 </div>
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="2">
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-2.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+                                 </div>
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12"  data-title="Chichen Itza" data-content="Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza Chichen Itza" data-category="3" >
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-3.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                                 <div class="bg-white p-1 mx-0 filtr-item-item modal-open my-2 px-2 w-full md:w-4/12 lg:w-3/12" data-feather="4">
+                                    <div class="wrapper border p-2">
+                                    <img class="h-50 lg:h-80 w-full object-cover object-center mb-6"
+                                       src="assets/images/teams-page/member-4.png" alt="Team Member">
+                                    <div class="w-full block px-4">
+                                       <h2 class="text-lg text-gray-900 font-bold title-font mb-1">Chichen Itza</h2>
+                                       <p class="leading-relaxed text-base mb-2">Fingerstache bche.</p>
+                                    </div>
+                              </div>
+                                 </div>
+                           <!-- =============/ Row end =======-->
+                       </div>
+                     </div>
+                  </div>
+               </section>
+
+                  <!--  Row Teams Join Us -->
+                  <section class="app__join-us section app__content">
+                     <div class="app__content-inner"
+                     style="
+                     background-repeat: no-repeat;
+                     background-size: cover;
+                     background-image: url('dist/images/teams/footer/teams-footer.png');
+                     "
+                     >
+                        <div class="ml-auto container relative py-6 md:py-10 lg:py-28 px-0 md:px-0">
+                              <!-- ##Slide -->
+                              <div class="flex justify-end">
+                                       <div
+                                          class="block lg:w-5/12 md:w-6/12 p-4 w-8/12 pr-6 md:py-10 md:pl-5 lg:pl-10 md:pr-6 lg:pr-6 content-bg"
+                                          >
+                                          <h2
+                                             class="text-white text-sm md:text-xl lg:text-4xl leading-normal uppercase font-bold"
+                                             >
+                                             Join us on board for the career journey of your life
+                                          </h2>
+                                          <p class="text-white my-4 text-sm md:text-base font-light md:font-normal">
+                                             We're always looking for people 
+                                             who can bring new perspective
+                                             and life experience to our teams.
+                                          </p>
+                                          <a
+                                          class="px-4 md:px-6 inline-block mt-2 md:mt-4 py-1 md:py-2 border-none btn text-sm md:text-sm lg:text-lg leading-normal rounded-md uppercase"
+                                          href="#/"
+                                          >
+                                          Current Vacancies
+                                       </a>
+                                       </div>
+                              </div>
+                              <!-- ##Slide -->
+                        </div>
+                     </div>
+                  </section>
+                  <!-- ##  Row Teams Join Us -->
+
+                  <!-- Row  CTA -->
+                  <section class="section app__cta">
+                     <div class="app__cta-inner">
+                        <div class="container mx-auto">
+                           <div class="w-12/12 md:w-8/12 lg:w-6/12 mx-auto my-16 relative">
+                              <div class="w-full px-6 md:px-0 bg-white">
+                                 <h2
+                                    class="text-2xl lg:text-5xl mb-8 font-bold uppercase text-color-primary leading-normal"
+                                    >
+                                    <span class="block text-4xl md:text-5xl lg:text-7xl">A CREATIVE,</span>
+                                    VISIONARY APPROACH
+                                 </h2>
+                                 <p class="text-base lg:text-xl leading-normal text-color-2">
+                                    Our creative team thrive on helping you bring your ideas 
+                                    and vision to life - however unusual or out of the
+                                    ordinary they might seem. We create bespoke experiences –
+                                    everything from intimate dinners in private homes to
+                                    beautiful weddings, galas for royalty and large-scale
+                                    corporate events.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+                  <!-- //Row  CTA -->
+
+          </section>
+         <!-- App Footer -->
+         <footer class="app__footer">
+            <div class="app__footer-inner">
+               <div
+                  class="max-w-screen-xl mx-auto py-6 lg:py-6"
+                  >
+                  <div class="flex flex-col md:flex-row content-between">
+                     <div class="w-full md:w-5/12 lg:w-6/12 flex">
+                           <div class="item w-full px-4 md:pl-6 md:pr-12 lg:pl-8 lg:pr-24">
+                              <div class="flex items-center">
+                                 <div class="inline-block mr-4">
+                                    <img
+                                       src="assets/images/header/header-el-small.svg"
+                                       class="h-10"
+                                       alt="header image el"
+                                       />
+                                 </div>
+                                 <div class="inline-block">
+                                    <img
+                                    alt="header image el"
+                                    class="h-10" 
+                                    src="assets/images/header/app-logo.svg"  />
+                                 </div>
+                              </div>
+                              <div class="block">
+                                 <p class="text-white mt-10 md:mt-4 text-base  md:text-sm font-normal md:font-normal lg:text-base">
+                                    Our catering services are perfect for any size, any style,
+                                    and are customized to your budget.
+                                 </p>
+                              </div>
+                              <div class="block">
+                                 <h3 class="font-normal md:font-bold text-lg text-left text-white uppercase text-white mt-6 mb-4">
+                                    Connect with us
+                                 </h3>
+                                 <div class="flex items-center">
+                                    <input
+                                       class="w-full rounded-l-lg lg:p-4 md:p-3 p-3 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
+                                       placeholder="Enter your email address"
+                                       />
+                                    <button
+                                       class="lg:p-4 md:p-3 p-3 rounded-r-lg btn text-white font-bold uppercase border"
+                                       >
+                                    Send
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                     </div>
+                     <div class="w-full md:w-7/12 lg:w-6/12 flex flex-col md:flex-row">
+                      <div class="w-full md:w-8/12 px-4 md:px-2 flex">
+                        <div class="item w-1/2 mt-8">
+                          <div class="block w-full py-4 md:py-0">
+                             <h2 class="font-normal md:font-bold text-xl text-left text-white mb-4">Company</h2>
+                             <nav class="w-full">
+                                <ul>
+                                   <li class="my-2">
+                                      <a class="my-2 text-white text-base md:text-sm lg:text-base" href="#/">Team </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Portfolio
+                                      </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Carreer
+                                      </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="my-2 text-white text-base" href="#/">FAQ </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Recognisation
+                                      </a>
+                                   </li>
+                                </ul>
+                             </nav>
+                          </div>
+                       </div>
+                       <div class="item w-1/2 mt-8">
+                          <div class="block w-full py-4 md:py-0">
+                             <h2 class="font-normal md:font-bold text-xl text-right md:text-left text-white mb-4">Support</h2>
+                             <nav class="w-full text-right md:text-left">
+                                <ul>
+                                   <li class="my-2">
+                                      <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Contact Us
+                                      </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Privacy policy
+                                      </a>
+                                   </li>
+                                   <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                      >Term of use
+                                   </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Photo credits
+                                      </a>
+                                   </li>
+                                   <li class="my-2">
+                                      <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                         >Reviews
+                                      </a>
+                                   </li>
+                                </ul>
+                             </nav>
+                          </div>
+                       </div>
+                      </div>
+                      <div class="w-full md:w-4/12 flex px-4 md:px-2 bg-white md:bg-transparent">
+                        <div class="item w-full mt-8">
+                          <div class="block w-full">
+                             <h2 class="font-bold text-xl text-center md:text-left md:text-white mb-4">Contact</h2>
+                             <div class="w-full md:text-left text-center">
+                                <p class="my-2 md:text-white text-base md:text-sm lg:text-base">Chicago Downtown,</p>
+                                <p class="my-2 md:text-white text-base">
+                                   247 E Ontario street,
+                                </p>
+                                <p class="my-2 md:text-white text-base md:text-sm lg:text-base">
+                                   2nd Floor, Chicago IL 60611
+                                </p>
+                                <p class="my-2 md:text-white text-base md:text-sm lg:text-base">312-280-4910</p>
+                                <p class="my-2 md:text-white text-base md:text-sm lg:text-base">
+                                   <a class="md:visible invisible" href="#/">indiangardenchicago.com</a>
+                                </p>
+                             </div>
+                          </div>
+                       </div>
+                      </div>
+                     </div>
+                  </div>
+                  <div
+                     class="mt-10 mb-0 pt-4 pb-4 mx-8 border-t  flex flex-col md:flex-row md:justify-between copyright-bar items-center text-sm text-gray-400"
+                     >
+                     <div class="order-3 md:order-1 py-2">
+                        <nav class="nav">
+                           <a href="#/" class="item px-4">Items</a>
+                           <a href="#/" class="item px-4">Policy</a>
+                           <a href="#/" class="item px-4">Security</a>
+                        </nav>
+                     </div>
+                     <div class="order-1 md:order-2 py-2">
+                        <img src="dist/images/social/social-icons.png" />
+                     </div>
+                     <div class="order-2 md:order-3 py-2">
+                        <p>
+                           &copy; 2022 Indiangarden All rights reserved.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!-- //App Footer -->
+      </div>
+      <!-- Scripts -->
+ 
+ <!--Modal-->
+ <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+   <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+   <!-- <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto"> -->
+   <div class="modal-container bg-white lg:w-8/12 md:w-7/12 w-11/12  mx-auto rounded shadow-lg z-50 overflow-y-auto">
+     <!-- Add margin if you want to see some of the overlay behind the modal-->
+     <div class="modal-content py-4 text-left px-6 relative">
+       <!--Title-->
+       <div class="flex justify-end items-center">
+         <div class="modal-close cursor-pointer z-50 absolute top-4 md:right-2 right-1">
+           <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+             <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+           </svg>
+         </div>
+       </div>
+
+       <!--Body-->
+       <div class="max-w-sm w-full lg:max-w-full lg:flex px-0">
+      <div class="w-full border p-2">
+         <div class="h-48 lg:h-full lg:w-full flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" 
+         style="
+         background-repeat: no-repeat;
+         background-size:cover;
+         background-image: url('./assets/images/teams/member-1.png')" title="Team Member">
+         </div>
+      </div>
+         <div class="p-4 flex flex-col justify-between leading-normal">
+           <div class="block border-b-1 border-r-0 border-t-0 border-l-0 border border-b-gray-dark pb-2">
+             <div class="text-gray-900 font-bold text-xl">Guru Subramaniam</div>
+             <div class="w-full my-3">
+                <h4>President Operations</h4>
+             </div>
+             <p class="text-gray-700 text-base">
+               Handled Delivery of Large accounts in Private 
+               and Public Services. Part of the Strategic Sales
+                Group supporting regions in pursuing large deals
+                 as Bid Director. Managed the opportunities end 
+                 to end by strategizing bid response and converting
+                  opportunities into wins. Over twenty plus years of
+                   Industry experience with focus on designing & 
+                   implementing Integration solution from concept
+                    to launch for large scale projects.
+               </p>
+               <div class="block mt-4">
+                  <img src="assets/images/social/social-icons.png">
+               </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+      <!-- Include jQuery Shuffle -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="assets/js/shuffle/shuffle.js"></script>
+      <script src="assets/js/shuffle/teams-shuffle.js"></script>
+      <script>
+            // header dropdown mobile
+            const dropdownButton = document.querySelector("#dropdown-mobile");
+            const dropdownList = document.querySelector("#menu-items");
+            dropdownButton.addEventListener("click", () => toggleClass(dropdownList));
+            //for events
+            const eventItems = document.querySelector("#events-dropdown");
+            document.querySelector("#menu-events").addEventListener("click", () => toggleClass(eventItems));
+
+            function toggleClass($el) {
+               if ($el.classList.contains("hidden")) {
+                  $el.classList.remove('hidden')
+               } else {
+                  $el.classList.add('hidden')
+               }
+            }
+
+   var openmodal = document.querySelectorAll('.modal-open')
+    for (var i = 0; i < openmodal.length; i++) {
+       let activeModal = openmodal[i];
+       activeModal.addEventListener('click', function(event){
+         var title = event.currentTarget.dataset.title;
+         var content = event.currentTarget.dataset.content;
+
+    	event.preventDefault()
+    	toggleModal()
+      })
+    }
+    
+    const overlay = document.querySelector('.modal-overlay')
+    overlay.addEventListener('click', toggleModal)
+    
+    var closemodal = document.querySelectorAll('.modal-close')
+    for (var i = 0; i < closemodal.length; i++) {
+      closemodal[i].addEventListener('click', toggleModal)
+    }
+    
+    document.onkeydown = function(evt) {
+      evt = evt || window.event
+      var isEscape = false
+      if ("key" in evt) {
+    	isEscape = (evt.key === "Escape" || evt.key === "Esc")
+      } else {
+    	isEscape = (evt.keyCode === 27)
+      }
+      if (isEscape && document.body.classList.contains('modal-active')) {
+    	toggleModal()
+      }
+    };
+    
+    
+    function toggleModal () {
+      const body = document.querySelector('body')
+      const modal = document.querySelector('.modal')
+      modal.classList.toggle('opacity-0')
+      modal.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+    
+
+
+      </script>
+      <!-- # Scripts -->
+   </body>
+</html>

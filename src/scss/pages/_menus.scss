@@ -1,0 +1,32 @@
+.app__page-menus {
+    .nav {
+        li {
+            a {
+                padding: 2.5rem;
+                background-color: transparent;
+                background-image: url("./../../assets/images/menus-page/background-img.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                @include respond-below(xtrasmall) {
+                    padding: 1rem;
+                }
+                &:hover {
+                    color: #ffffff;
+                    background-image: url("./../../assets/images/menus-page/menu-active-bg.png");
+                }
+            }
+            &.active {
+                a {
+                    color: #ffffff;
+                    background-image: url("./../../assets/images/menus-page/menu-active-bg.png");
+                }
+            }
+        }
+    }
+    .menu-item {
+        .footer {
+            background-color: rgba(72, 3, 3, 0.6);
+        }
+    }
+}

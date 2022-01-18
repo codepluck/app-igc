@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <meta
+         name="description"
+         content="India Garden Catering"
+         />
+      <title>Indian Garden Catering | Venue </title>
+      <link rel="manifest" href="/manifest.json">
+      <link rel="shortcut icon" href="/assets/images/favicon.ico">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <script src="assets/js/app.js" type="text/javascript"></script>
+      <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+      <link
+         href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap"
+         rel="stylesheet"
+         />
+   </head>
+   <body>
+      <div id="app__root">
+         <!-- App Header -->
+         <header class="app__header">
+            <div class="app__header-inner py-2">
+               <div class="container mx-auto">
+                  <div class="row md:flex justify-between items-center md:px-4 invisible hidden md:visible">
+                     <div class="app__header-item flex items-center space-x-4">
+                        <div class="app__header-logo">
+                           <a href="index.html">
+                           <img
+                              src="assets/images/header/app-logo.svg"
+                              alt="app logo"
+                              />
+                           </a>
+                        </div>
+                     </div>
+                     <div class="app__header-item">
+                        <div class="app__header-logo-center invisible lg:visible">
+                           <img
+                              src="assets/images/header/header-el.svg"
+                              alt="app logo"
+                              />
+                        </div>
+                     </div>
+                     <div class="app__header-item md:visible">
+                        <nav class="app__header-nav-items relative">
+                           <ul class="nav flex items-center">
+                              <li class="dropdown group inline-block relative">
+                                 <a class="text-white text-sm lg:text-lg" href="#/">Events</a>
+                                 <ul
+                                    class="dropdown-menu absolute hidden text-gray-700 pt-1 group-hover:block z-50"
+                                    >
+                                    <li class="">
+                                       <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                          >Weddings</a
+                                          >
+                                    </li>
+                                    <li class="">
+                                       <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                          >Social
+                                       </a>
+                                    </li>
+                                    <li class="">
+                                       <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                          >Corporate</a
+                                          >
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/menus.html">Menus</a></li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/venues.html">Venues</a></li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/teams.html">Teams</a></li>
+                              <li><a class="text-white text-sm lg:text-lg" href="/contact.html">Contact</a></li>
+                              <li class="search-items">
+                                 <button class="search-icon cursor-pointer pl-6 pt-1 lg:pt-2" id="search-toggle">
+                                 <i class="text-white h-10 lg:h-20" data-feather="search"></i>
+                                 </button>
+                                 <div class="absolute top-1 md:top-2 lg:top-7 left-0 w-full" id="search-field" >
+                                    <input type="search" placeholder="Search_" autofocus="autofocus" class="px-2 rounded-lg w-full text-grey-800 transition focus:outline-none focus:border-transparent p-2 appearance-none leading-normal text-sm lg:text-2xl">
+                                    <button type="submit" class=" absolute top-2 lg:top-3 right-1 lg:right-2">
+                                    <i  class="text-sm" data-feather="search"></i>
+                                    </button>
+                                 </div>
+                              </li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+                  <div class="row flex md:hidden justify-between items-center md:px-4 visible md:invisible">
+                     <div class="app__header-item mx-auto w-60">
+                        <div class="app__header-logo">
+                           <a class="block" href="index.html">
+                           <img
+                              class="block mx-auto"
+                              style="height: 48px; width: 48px"
+                              src="assets/images/header/header-el.svg"
+                              />
+                           <img
+                              class="block mx-auto  mt-2"
+                              style="height: 35px; width: 145px"
+                              src="assets/images/header/app-logo.svg"
+                              />
+                           </a>
+                        </div>
+                        <nav class="app__header-nav-items relative group">
+                           <div class="block mt-3">
+                              <img  id="dropdown-mobile"
+                                 class="block mx-auto mt-4"
+                                 style="height: 12px; width: 12px"
+                                 src="assets/images/header/arrow-down.png"
+                                 />
+                              <ul id="menu-items" class="nav flex-col items-center text-center pb-8 mt-4 hidden group-hover:block">
+                                 <li class="dropdown dropdown-mobile group inline-block relative w-full">
+                                    <a id="menu-events" class="text-white text-lg" href="#/">Events</a>
+                                    <ul
+                                       id="events-dropdown"
+                                       class="dropdown-menu mobile-menu absolute hidden text-gray-700 pt-1 group-hover:block z-50"
+                                       >
+                                       <li class="">
+                                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                             >Weddings</a
+                                             >
+                                       </li>
+                                       <li class="">
+                                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                             >Social
+                                          </a>
+                                       </li>
+                                       <li class="">
+                                          <a class="block whitespace-no-wrap uppercase text-sm" href="#"
+                                             >Corporate</a
+                                             >
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li><a class="text-white text-lg" href="/menus.html">Menus</a></li>
+                                 <li><a class="text-white text-lg" href="/venues.html">Venues</a></li>
+                                 <li><a class="text-white text-lg" href="/teams.html">Teams</a></li>
+                                 <li><a class="text-white text-lg" href="/contact.html">Contact</a></li>
+                              </ul>
+                           </div>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- ## App Header -->
+
+
+
+         <!-- App Page Venues -->
+         <section class="w-full app__page-venue">
+            <!-- Section Banner -->
+              <section class="app__page-banner w-full">
+               <div class="w-full bg-center bg-cover h-[10rem] md:h-[16rem] lg:h-[32rem]" 
+               style="
+               background-image: url(assets/images/venues-page/items/item-1.png);">
+
+                 <div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50">
+                 </div>
+               </div>
+              </section>
+            <!-- Section Banner --> 
+              <!-- Section Venue  -->
+              <section class="app__venue body-font">
+                     <div class="container px-5 py-4 md:py-10 mx-auto">
+                        <!-- ============= Heading Row =======-->
+                        <div class="flex flex-wrap w-full mb-0 md:mb-10">
+                           <div class="w-full">
+                              <h1 class="text-3xl pl-2 md:pl-2 lg:text-5xl text-color-3 title-font uppercase font-bold">
+                                 Green Medows
+                              </h1>
+                           </div>
+                        </div>
+                        <!-- ============= Heading Row =======-->
+                        <!-- ============= Row =======-->
+                        <div class="flex flex-wrap my-4">
+                           <div class="w-full md:w-5/12 lg:w-6/12">
+                              <div class="venue-col">
+                                 <div class="w-full block px-3">
+                                    <h2 class="text-color-3 text-xl mb-4">The perfect venue for your perfect day</h2>
+                                    <p class="text-lg text-color-2 leading-relaxed">
+                                       Who doesn't want their Wedding Day to be perfect? 
+                                       If you're dreaming of your Wedding in an exclusive,
+                                       unique, secluded and romantic coastal setting, the 
+                                       Venue at Sandy Cove is the ultimate choice & the beauty
+                                       of the scenery will draw you in. The location is awesome
+                                       with breath taking views across the sea, the rugged &
+                                       dramatic Atlantic Coast & Exmoor – just the most
+                                       perfect and magical backdrop for amazing photos and memories.
+                                       Exuding beauty, tranquillity & romance, we are one of the
+                                       leading venues in the South-West.
+                                    </p>
+                                    <p class="text-lg text-color-2 leading-relaxed">
+                                       The Venue has state of the art lighting with a colour wheel so you can tailor the lighting to fit with your colour scheme… The ceiling has panels with fibre optic lights giving the effect of fairy lights. It has bi fold doors across the full front of the building offering amazing sea view, bringing the outside in…the perfect setting.
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="w-full md:w-5/12 lg:w-6/12 flex flex-col mt-6 md:mt-0 md:flex-row">
+                                    <!-- ============= Venue Item =======-->
+                                    <div class="xl:w-1/2 md:w-1/2 p-2 w-full">
+                                       <div class="w-full md:px-2 border-none md:border-l-2 venue-col">
+                                          <div class="block w-full">
+                                             <h3 class="text-xl lg:font-bold md:font-bold font-normal">VENUE DETAILS</h3>
+                                          </div>
+                                          <div class="grid lg:grid-cols-2 md:grid-cols-1 order-last md:order-first my-4">
+                                             <div>
+                                                <p class="font-normal text-color-8 text-lg mb-2">STANDING CAPACITIES</p>
+                                                <p class="lg:font-bold text-color-2 font-normal">220</p>
+                                             </div>
+                                             <div>
+                                                <p class="font-normal text-color-8 text-lg mb-2">SEATED CAPACITIES</p>
+                                                <p class="lg:font-bold text-color-2 font-normal">140</p>
+                                             </div>
+                                          </div>
+                                          <div class="grid grid-cols-1 order-last md:order-first my-4">
+                                             <div>
+                                                <p class="font-normal text-color-8 text-lg mb-2">AMENITIES</p>
+                                                <p class="lg:font-bold text-color-2 font-normal">WiFi</p>
+                                                <p class="lg:font-bold text-color-2 font-normal">AV including sound, lighting, and video</p>
+                                                <p class="lg:font-bold text-color-2 font-normal">Parking for 500+ cars</p>
+                                                <p class="lg:font-bold text-color-2 font-normal">ADA accessible</p>
+                                             </div>
+                                          </div>
+                                          <div class="grid grid-cols-1 order-last md:order-first my-4">
+                                             <div>
+                                                <p class="font-normal text-color-8 text-lg mb-2">STYLE/DÉCOR</p>
+                                                <p class="lg:font-bold text-color-2 font-normal">Traditional, Rustic, Garden</p>
+                                             </div>
+                                          </div>
+                                          <div class="grid grid-cols-1 order-last md:order-first my-4">
+                                             <div>
+                                                <p class="font-normal text-color-8 text-lg mb-2">EVENT TYPE</p>
+                                                <p class="lg:font-bold text-color-2 font-normal">Wedding, Social, Corporate, Picnic</p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- ============= // Venue Item =======-->
+                                    <!-- ============= Venue Item =======-->
+                                     <div class="xl:w-1/2 md:w-1/2 p-2 w-full">
+                                                               <div class="w-full md:px-2 border-none md:border-l-2 venue-col mt-4 md:mt-10">
+                                                                  <div class="grid grid-cols-1 order-last md:order-first my-4">
+                                                                     <div>
+                                                                        <p class="font-normal text-color-8 text-lg mb-2 uppercase">Location</p>
+                                                                        <p class="lg:font-bold text-color-2 font-normal">Suburbs - North</p>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div class="grid grid-cols-1 order-last md:order-first my-4">
+                                                                     <div>
+                                                                        <p class="font-normal text-color-8 text-lg mb-2">INDOOR/ OUTDOOR</p>
+                                                                        <p class="lg:font-bold text-color-2 font-normal">INDOOR</p>
+                                                                        <p class="lg:font-bold text-color-2 font-normal">OUTDOOR</p>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div class="grid grid-cols-1 order-last md:order-first my-4">
+                                                                     <div>
+                                                                        <p class="font-normal text-color-8 text-lg mb-2">ATMOSPHERE</p>
+                                                                        <p class="lg:font-bold text-color-2 font-normal">A variety of event spaces all feature stunning views of this world class facility featuring a lake, beach, and wooded areas.</p>
+                                                                     </div>
+                                                                  </div>
+                                                                  <div class="grid grid-cols-1 order-last md:order-first my-4">
+                                                                     <div>
+                                                                        <p class="font-normal text-color-8 text-lg mb-2">ADDRESS</p>
+                                                                        <p class="lg:font-bold text-color-2 font-normal">65 Curzon St, Chicago W1J 8PE, Chicago IL 60611</p>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                     </div>
+                                    <!-- ============= // Venue Item =======-->
+                           </div>
+                        </div>
+                        <!-- =============/ Row end =======-->
+                     </div>
+              </section>
+              <!-- ============= Section Venue =======-->
+
+
+
+               <!-- ============= // Section Venue Slider =======-->
+               <section class="app__venue-slider">
+                  <div class="app__venue-slider-inner">
+                     <div class="splide">
+                        <div class="splide__track">
+                           <ul class="splide__list">
+                              <li class="splide__slide">
+                                 <img
+                                    class="object w-full h-full"
+                                    alt="slide"
+                                    src="dist/images/venues/slider/venue-slider-1.png"
+                                    />
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- ============= Section Venue Slider =======-->
+
+
+
+
+               <!-- ============= Section Venue Contact =======-->
+               <section class="app__contact-vanue body-font relative">
+                  <div class="container px-2 md:px-6 py-8 mx-auto">
+                     <div class="flex flex-col w-full mb-4">
+                        <h1 class="px-2 md:px-4 text-color-3 text-sm md:text-xl lg:text-4xl leading-normal uppercase font-bold">
+                           BOOK YOUR VENUE
+                        </h1>
+                     </div>
+                     <div class="lg:w-12/12 md:w-12/12 mx-2">
+                        <div class="flex flex-wrap -m-2">
+                           <div class="p-2 w-1/2 my-2">
+                              <div class="relative">
+                                 <input type="text" placeholder="Name" id="name" name="name" class="w-full bg-white border border-gray-300 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                              </div>
+                           </div>
+                           <div class="p-2 w-1/2 my-2">
+                              <div class="relative">
+                                 <input type="email" placeholder="Email" id="email" name="email" class="w-full bg-white border border-gray-300 focus:bg-white text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="flex flex-wrap -m-2">
+                           <div class="p-2 w-1/2 my-2">
+                              <div class="relative">
+                                 <input type="text" placeholder="Phone" id="phone" name="phone" class="w-full bg-white border border-gray-300 focus:bg-white text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                              </div>
+                           </div>
+                           <div class="p-2 w-1/2 my-2">
+                              <div class="relative">
+                                 <input type="email" placeholder="Type of event" id="event" name="event" class="w-full bg-white border border-gray-300 focus:bg-white text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="flex flex-wrap -m-2">
+                           <div class="p-2 w-full my-2">
+                              <div class="relative">
+                                 <textarea id="message" placeholder="Message" name="message" class="w-full bg-white border border-gray-300 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                              </div>
+                           </div>
+                           <div class="p-2 w-full text-right">
+                              <button class="px-4 md:px-6 inline-block mt-0 py-1 md:py-2 border-none btn text-sm md:text-sm lg:text-lg leading-normal rounded-md uppercase">Contact Us</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- ============= // Section Venue Contact =======-->
+
+
+
+
+               <!--  Row Venue Map -->
+               <section class="app__venues-map section app__content">
+                  <div class="app__content-inner"
+                  style="
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  background-image: url('dist/images/venues/venue-bg.png');
+                  "
+                  >
+                     <div class="ml-auto md:my-0 lg:my-16 container relative py-6 md:py-10 lg:py-28 px-0 md:px-0">
+                           <!-- ##Slide -->
+                           <div class="flex justify-end">
+                                    <div
+                                       class="block lg:w-5/12 md:w-6/12 p-4 w-8/12 pr-6 md:py-10 md:pl-5 lg:pl-10 md:pr-6 lg:pr-6 content-bg"
+                                       style="background-color: rgba(29, 55, 81,.8)"
+                                       >
+                                       <h2
+                                          class="text-white text-sm md:text-xl lg:text-4xl leading-normal uppercase font-bold"
+                                          >
+                                          Do you already have a venue in mind?
+                                       </h2>
+                                       <p class="text-white my-4 text-sm md:text-base font-light md:font-normal">
+                                          Then we're halfway there! We can now help
+                                          you see how to get the best out of your
+                                          chosen venue.
+                                       </p>
+                                       <a
+                                       class="px-4 md:px-6 inline-block mt-2 md:mt-4 py-1 md:py-2 border-none btn text-sm md:text-sm lg:text-lg leading-normal rounded-md uppercase"
+                                       href="#/"
+                                       >
+                                       Contact Us
+                                    </a>
+                                    </div>
+                           </div>
+                           <!-- ##Slide -->
+                     </div>
+                  </div>
+               </section>
+              <!-- ##  Row Venue Map -->
+
+            </section>
+
+        <!-- App Footer -->
+        <footer class="app__footer">
+         <div class="app__footer-inner">
+            <div
+               class="max-w-screen-xl mx-auto py-6 lg:py-6"
+               >
+               <div class="flex flex-col md:flex-row content-between">
+                  <div class="w-full md:w-5/12 lg:w-6/12 flex">
+                        <div class="item w-full px-4 md:pl-6 md:pr-12 lg:pl-8 lg:pr-24">
+                           <div class="flex items-center">
+                              <div class="inline-block mr-4">
+                                 <img
+                                    src="assets/images/header/header-el-small.svg"
+                                    class="h-10"
+                                    alt="header image el"
+                                    />
+                              </div>
+                              <div class="inline-block">
+                                 <img
+                                 alt="header image el"
+                                 class="h-10" 
+                                 src="assets/images/header/app-logo.svg"  />
+                              </div>
+                           </div>
+                           <div class="block">
+                              <p class="text-white mt-10 md:mt-4 text-base  md:text-sm font-normal md:font-normal lg:text-base">
+                                 Our catering services are perfect for any size, any style,
+                                 and are customized to your budget.
+                              </p>
+                           </div>
+                           <div class="block">
+                              <h3 class="font-normal md:font-bold text-lg text-left text-white uppercase text-white mt-6 mb-4">
+                                 Connect with us
+                              </h3>
+                              <div class="flex items-center">
+                                 <input
+                                    class="w-full rounded-l-lg lg:p-4 md:p-3 p-3 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
+                                    placeholder="Enter your email address"
+                                    />
+                                 <button
+                                    class="lg:p-4 md:p-3 p-3 rounded-r-lg btn text-white font-bold uppercase border"
+                                    >
+                                 Send
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                  </div>
+                  <div class="w-full md:w-7/12 lg:w-6/12 flex flex-col md:flex-row">
+                   <div class="w-full md:w-8/12 px-4 md:px-2 flex">
+                     <div class="item w-1/2 mt-8">
+                       <div class="block w-full py-4 md:py-0">
+                          <h2 class="font-normal md:font-bold text-xl text-left text-white mb-4">Company</h2>
+                          <nav class="w-full">
+                             <ul>
+                                <li class="my-2">
+                                   <a class="my-2 text-white text-base md:text-sm lg:text-base" href="#/">Team </a>
+                                </li>
+                                <li class="my-2">
+                                   <a class="my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                      >Portfolio
+                                   </a>
+                                </li>
+                                <li class="my-2">
+                                   <a class="my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                      >Carreer
+                                   </a>
+                                </li>
+                                <li class="my-2">
+                                   <a class="my-2 text-white text-base" href="#/">FAQ </a>
+                                </li>
+                                <li class="my-2">
+                                   <a class="text-white text-base md:text-sm lg:text-base" href="#/"
+                                      >Recognisation
+                                   </a>
+                                </li>
+                             </ul>
+                          </nav>
+                       </div>
+                    </div>
+                    <div class="item w-1/2 mt-8">
+                       <div class="block w-full py-4 md:py-0">
+                          <h2 class="font-normal md:font-bold text-xl text-right md:text-left text-white mb-4">Support</h2>
+                          <nav class="w-full text-right md:text-left">
+                             <ul>
+                                <li class="my-2">
+                                   <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                      >Contact Us
+                                   </a>
+                                </li>
+                                <li class="my-2">
+                                   <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                      >Privacy policy
+                                   </a>
+                                </li>
+                                <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                   >Term of use
+                                </a>
+                                </li>
+                                <li class="my-2">
+                                   <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                      >Photo credits
+                                   </a>
+                                </li>
+                                <li class="my-2">
+                                   <a class="block my-2 text-white text-base md:text-sm lg:text-base" href="#/"
+                                      >Reviews
+                                   </a>
+                                </li>
+                             </ul>
+                          </nav>
+                       </div>
+                    </div>
+                   </div>
+                   <div class="w-full md:w-4/12 flex px-4 md:px-2 bg-white md:bg-transparent">
+                     <div class="item w-full mt-8">
+                       <div class="block w-full">
+                          <h2 class="font-bold text-xl text-center md:text-left md:text-white mb-4">Contact</h2>
+                          <div class="w-full md:text-left text-center">
+                             <p class="my-2 md:text-white text-base md:text-sm lg:text-base">Chicago Downtown,</p>
+                             <p class="my-2 md:text-white text-base">
+                                247 E Ontario street,
+                             </p>
+                             <p class="my-2 md:text-white text-base md:text-sm lg:text-base">
+                                2nd Floor, Chicago IL 60611
+                             </p>
+                             <p class="my-2 md:text-white text-base md:text-sm lg:text-base">312-280-4910</p>
+                             <p class="my-2 md:text-white text-base md:text-sm lg:text-base">
+                                <a href="#/">www.indiangardenchicago.com</a>
+                             </p>
+                          </div>
+                       </div>
+                    </div>
+                   </div>
+                  </div>
+               </div>
+               <div
+                  class="mt-10 mb-0 pt-4 pb-4 mx-8 border-t  flex flex-col md:flex-row md:justify-between copyright-bar items-center text-sm text-gray-400"
+                  >
+                  <div class="order-3 md:order-1 py-2">
+                     <nav class="nav">
+                        <a href="#/" class="item px-4">Items</a>
+                        <a href="#/" class="item px-4">Policy</a>
+                        <a href="#/" class="item px-4">Security</a>
+                     </nav>
+                  </div>
+                  <div class="order-1 md:order-2 py-2">
+                     <img src="dist/images/social/social-icons.png" />
+                  </div>
+                  <div class="order-2 md:order-3 py-2">
+                     <p>
+                        &copy; 2022 Indiangarden All rights reserved.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- //App Footer -->
+   </div>
+   <!-- Scripts -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+   <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+      />
+   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+   <script>
+      // header dropdown mobile
+      const dropdownButton = document.querySelector("#dropdown-mobile");
+      const dropdownList = document.querySelector("#menu-items");
+      dropdownButton.addEventListener("click", () => toggleClass(dropdownList));
+
+      //for events
+      const eventItems = document.querySelector("#events-dropdown");
+      document.querySelector("#menu-events").addEventListener("click", () => toggleClass(eventItems));
+
+      function toggleClass($el) {
+         if ($el.classList.contains("hidden")) {
+            $el.classList.remove('hidden')
+         } else {
+            $el.classList.add('hidden')
+         }
+      }
+</script>
+
+<script type="text/javascript">
+   document.addEventListener("DOMContentLoaded", function () {
+     let splide = new Splide(".splide", {
+       type: "loop",
+       perPage: 1,
+       pagination: false,
+       height: '42rem',
+       breakpoints: {
+                820: {
+                    perPage: 1,
+                    height: '26rem',
+                },
+                480: {
+                    perPage: 1,
+                    pagination: false,
+                    height: '12rem',
+                    padding: "0",
+                },
+            },
+     });
+     splide.mount();
+   });
+   feather.replace();
+</script>
+   <!-- ##Scripts -->
+</body>
+</html>
